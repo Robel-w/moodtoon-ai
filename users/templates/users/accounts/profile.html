@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Hello {{user.username }}</h1>
+<div class="container my-5">
+<h1>Hello {{user.username|capfirst }}</h1>
 <ul>
 {% for list in user_lists %}
-<li>{{list.name}}</li>
+<li><a herf="#">{{list.name}}</a></li>
 {% endfor %}
 </ul>
+<button>➕ List</button>
+</div>
 {% endblock %}
